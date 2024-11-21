@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="login">
+      <h1>Login</h1>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn">Register</button>
+    </div>
+    <div id="chat" style="display: none;">
+      <div id="sidebar">
+        <h2>Users</h2>
+        <ul id="userList"></ul>
+      </div>
+      <div id="main">
+        <div id="messages">
+          <h2 id="chatTitle">Public Chat</h2>
+          <div id="messageLog"></div>
+        </div>
+        <div id="messageBar">
+          <input type="text" id="messageInput" placeholder="Type a message">
+          <button id="sendMessageBtn">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
